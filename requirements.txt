@@ -1,5 +1,0 @@
-certifi==2022.5.18.1
-Pillow==9.1.1
-pip==21.2.4
-setuptools==61.2.0
-wheel==0.37.1
