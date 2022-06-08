@@ -56,8 +56,8 @@ def display_crop():
 
 #button functions
 def move2file(target_path):
-    print(target_path)
     shutil.move(image_path[n.count],target_path+ '/'+ image_path[n.count]) 
+    print(f'moved {image_path[n.count]} to {target_path}')
     n.count += 1 
     display_full()
     display_crop()
