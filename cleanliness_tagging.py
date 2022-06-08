@@ -4,7 +4,6 @@ import glob
 import shutil
 import re
 import os
-import copy
 
 #counter for image labelled 
 class counter:
@@ -76,7 +75,7 @@ rely = [0.2]*len(target_dir)
 hkey = ['a','s','d','f','h','j','k','l']
 
 for i in range(len(btn_list)):
-    btn_list[i]  = tk.Button(win, text=target_dir[i], width=btn_w, height=btn_h, command= lambda m=target_dir[i]: move2file(m))
+    btn_list[i]  = tk.Button(win, text=target_dir[i]+f' ({hkey[i].upper()})', width=btn_w, height=btn_h, command= lambda m=target_dir[i]: move2file(m))
     btn_list[i].place(relx=relx[i] ,rely= rely[i], anchor='center')
     win.bind(hkey[i], lambda event, d = target_dir[i]: move2file(d))
 
@@ -86,13 +85,13 @@ img_path = re.search('(.+)_\d+.jpg',image_path[n.count]).group(1)
 img = Image.open(f'../cropped_image/org_{img_path}.jpg')
 img = ImageTk.PhotoImage(img)
 panel = tk.Label(win, image = img)
-panel.place(relx= 0.5, rely=0.755555, anchor='center')
+panel.place(relx= 0.5, rely=0.8, anchor='center')
 display_full()
 
 #cropped images
 img_crop = ImageTk.PhotoImage(Image.open(image_path[n.count]))
 panel_crop = tk.Label(win, image = img_crop)
-panel_crop.place(relx= 0.5, rely=0.1, anchor='center')
+panel_crop.place(relx= 0.5, rely=0.06, anchor='center')
 
 win.mainloop()
 
