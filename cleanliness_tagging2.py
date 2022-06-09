@@ -111,13 +111,13 @@ img_path = re.search('(.+)_\d+.jpg',image_path[n.count]).group(1)
 img = Image.open(f'../cropped_image/org_{img_path}.jpg')
 img = ImageTk.PhotoImage(img)
 panel = tk.Label(win, image = img)
-panel.place(relx= 0.5, rely=0.755555, anchor='center')
+panel.place(relx= 0.5, rely=0.8, anchor='center')
 display_full()
 
 #cropped images
 img_crop = ImageTk.PhotoImage(Image.open(image_path[n.count]))
 panel_crop = tk.Label(win, image = img_crop)
-panel_crop.place(relx= 0.5, rely=0.1, anchor='center')
+panel_crop.place(relx= 0.5, rely=0.06, anchor='center')
 
 win.mainloop()
 
