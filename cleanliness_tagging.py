@@ -35,7 +35,7 @@ image_path.sort(key=lambda x:(int(re.search('(\d+)-(\d+)_(\d+)_(\d+).jpg', x).gr
 
 
 #name and create target  folders 
-target_dir = ['clean_wet', 'clean-half', 'clean_dry', 'little-dirty', 'sparse-dirty', 'dense-dirty', 'blockage', 'broader']
+target_dir = ['clean_wet', 'clean-half', 'clean_dry', 'little-dirty', 'sparse-dirty', 'dense-dirty', 'blockage', 'broader', 'unknown']
 
 for d in target_dir:
     try:
@@ -96,9 +96,9 @@ win.geometry("1600x900")
 btn_w = 15
 btn_h = 5
 btn_list = [tk.Button(win)]*len(target_dir)
-relx = [0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85]
+relx = [0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85,0.95]
 rely = [0.2]*len(target_dir)
-hkey = ['a','s','d','f','h','j','k','l']
+hkey = ['a','s','d','f','h','j','k','l','i']
 
 #create class buttons
 for i in range(len(btn_list)):
